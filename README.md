@@ -5,11 +5,9 @@ PHP + MySQL Container for Laravel on GitPod
 [![Abrir no Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/TieleFranceschi/laravel-php-mysql/)
 
 
-## PASSOS PARA UTILIZAÇÃO
+## REPOSITORIO ATIVIDADES
 
-- Faça um fork do repositório para sua conta;
-- pegue a URL do seu projeto é adicione a URL <b>https://gitpod.io/#+SUA+URL</b>
-- Ex: <b>https://gitpod.io/#https://github.com/wagcbjr/laravel-php-mysql/</b>
+-  <b>https://gitpod.io/#https://github.com/TieleFranceschi/laravel-php-mysql/</b>
 
 ### Crie o Banco de Dados no MySQL
 ```md
