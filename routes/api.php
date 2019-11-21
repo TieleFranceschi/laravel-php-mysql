@@ -13,24 +13,25 @@ use Illuminate\Http\Request;
 |
 */
 //criar rotas
-Route::middleware('auth:api')->group(function ($e){
-Route::get('alunos', 'AlunoController@index');
-Route::get('alunos/{aluno}','AlunoController@show');
-Route::post('alunos', 'AlunoController@store');
-Route::put('alunos/{aluno}', 'AlunoController@update');
-Route::delete('alunos/{aluno}', 'AlunoController@destroy');
+//Route::middleware('auth:api')->group(function ($e){
 
 
-Route::post('alunos/{aluno}/notas','NotasController@store');
-Route::get('alunos/{aluno}/notas','NotasController@index');
-Route::get('alunos/{aluno}/notas','NotasController@show');
-Route::put('alunos/{aluno}/notas','NotasController@update');
-Route::delete('alunos/{aluno}/notas','NotasController@destroy');
+Route::get('categoria_restaurantes', 'CategoriaRestauranteController@index');
+Route::get('categoria_restaurantes/{categoria}','CategoriaRestauranteController@show');
+Route::post('categoria_restaurantes', 'CategoriaRestauranteController@store');
+Route::put('categoria_restaurantes/{categoria}', 'CategoriaRestauranteController@update');
+Route::delete('categoria_restaurantes/{categoria}', 'CategoriaRestauranteController@destroy');
+
+Route::post('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@store');
+Route::get('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@index');
+Route::get('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@show');
+Route::put('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@update');
+Route::delete('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@destroy');
 
 
-Route::post('auth/logout','AuthController@logout');
-Route::get('auth','AuthController@index');
-});
+//Route::post('auth/logout','AuthController@logout');
+//Route::get('auth','AuthController@index');
+//});
 
-Route::post('auth/register','AuthController@register');
-Route::post('auth/login','AuthController@login');
+//Route::post('auth/register','AuthController@register');
+//Route::post('auth/login','AuthController@login');
