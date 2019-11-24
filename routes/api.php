@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 //criar rotas
-//Route::middleware('auth:api')->group(function ($e){
+Route::middleware('auth:api')->group(function ($e){
 
 
 Route::get('categoria_restaurantes', 'CategoriaRestauranteController@index');
@@ -22,6 +22,7 @@ Route::post('categoria_restaurantes', 'CategoriaRestauranteController@store');
 Route::put('categoria_restaurantes/{categoria}', 'CategoriaRestauranteController@update');
 Route::delete('categoria_restaurantes/{categoria}', 'CategoriaRestauranteController@destroy');
 
+
 Route::post('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@store');
 Route::get('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@index');
 Route::get('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@show');
@@ -29,9 +30,9 @@ Route::put('categoria_restaurantes/{categoria}/restaurantes','RestauranteControl
 Route::delete('categoria_restaurantes/{categoria}/restaurantes','RestauranteController@destroy');
 
 
-//Route::post('auth/logout','AuthController@logout');
-//Route::get('auth','AuthController@index');
-//});
+Route::post('auth/logout','AuthController@logout');
+Route::get('auth','AuthController@index');
+});
 
-//Route::post('auth/register','AuthController@register');
-//Route::post('auth/login','AuthController@login');
+Route::post('auth/register','AuthController@register');
+Route::post('auth/login','AuthController@login');
